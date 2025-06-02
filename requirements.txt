@@ -1,0 +1,6 @@
+streamlit>=1.34
+pandas>=2.2
+xlsxwriter
+google-generativeai>=0.5.2
+pillow
+pdf2image
