@@ -1,4 +1,9 @@
-import google.generativeai as genai, json, PIL.Image as Image, io
+import google.generativeai as genai
+import json
+from PIL import Image
+import io
+import os  # ← deze moet er zeker staan
+
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel("gemini-1.5-pro-vision")
 
