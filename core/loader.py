@@ -9,7 +9,8 @@ PATTERNS = {
     "bank": r"bank.*\.csv",
 }
 
-def load_moneybird_zip(uploaded_bytes: bytes) -> dict[str, pd.DataFrame]:
+from typing import Dict
+def load_moneybird_zip(uploaded_bytes: bytes) -> Dict[str, pd.DataFrame]:
     with ZipFile(io.BytesIO(uploaded_bytes)) as z:
         frames = {}
         for info in z.infolist():
