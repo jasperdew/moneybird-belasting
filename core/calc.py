@@ -1,4 +1,7 @@
-def aggregate(frames: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
+from typing import Dict
+import pandas as pd
+
+def aggregate(frames: Dict[str, pd.DataFrame]) -> Dict[str, pd.DataFrame]:
     inv  = frames['invoices']
     exp  = frames['expenses']
     omzet  = inv['total_excl_tax'].sum()
